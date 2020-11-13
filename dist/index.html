@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的简历</title>
+    <style>body{
+            margin: 0;
+            font: 14px/1.5 Arial;
+            color: #666;
+        }
+        .layout{
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        #page{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        header{
+            
+            background: #3c3c3c;
+            width: 100%;
+            text-align: center;
+            padding: 40px 0 20px 0;/*上 右 下 左*/
+            color: #fff;
+        }
+        header h1{
+            font-size: 24px;
+            margin-bottom: 0;
+        }
+        header p{
+            font-size: 18px;
+            color: #aaa;
+            margin: 0;
+        }
+
+
+        aside{
+            width: 240px;
+            border-right: 1px solid #ccc;
+            position: relative;
+            padding-top: 100px;/* padding-top基础信息的间距*/
+        }
+        aside  .avatar{
+           text-align: center;
+           position: absolute;
+           top: -100px;
+           width: 100%;
+        }
+        aside .avatar img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        section{
+            border-bottom: 2px solid #ccc;
+            margin:30px 0 0 20px;/*下 右 上 左*/
+            padding-bottom: 20px;
+        }
+        section h2{
+            color: #5c00ca;
+            font-size: 16px;
+        }
+        .personal{
+            line-height:2;
+        }
+        .personal .item span:first-child{
+            display: inline-block;
+            width: 80px;
+        }
+        .personal .item span:last-child::before{
+           content: ':';
+           margin-right:20px;
+        }
+        .skills .item{
+            display: flex;
+            align-items: center;
+        }
+        .skills .keyword{
+            width: 80px;
+        }
+        .skills .rule{
+            flex:1;
+            height: 4px;
+            background: #ccc;
+        } 
+        .skills .rule i{
+            display: block;
+            height: 4px;
+            background: #000;
+        }
+        .contact .item{
+            display:flex;
+            align-items: center;
+        }
+        .contact .item span{
+            margin-left: 20px;
+        }
+        .contact svg{
+            width: 20px;
+            height: 20px;
+        }
+
+
+        main{
+            background: #999;
+            flex: 1;/*右边充满自己*/
+            min-height: calc(100vh - 100px); /*自适应高度,注意要加空格*/
+        }
+    /* @media(max-width: 768px){
+        aside{
+            width: 100%;
+        }
+    } */
+        .projects{} 
+        .projects strong {
+            color: #f60;
+        }
+        .projects  {
+            margin-top: 0;
+            list-style-position: inside;
+            padding: 0;
+        }
+        .projects  {
+            margin-bottom: 24px;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-between;
+        }
+        .projects {
+            display: inline-block;
+            }</style>
+</head>
+<body>
+    <div class="layout" id="page"> 
+        <svg>
+            <symbol id="icon-weixin1" viewBox="0 0 1024 1024">
+                <path d="M691.537 318.713c11.305 0 22.491 0.83 33.587 2.065-30.178-140.519-180.417-244.922-351.905-244.922-191.721 0-348.77 130.677-348.77 296.612 0 95.781 52.25 174.437 139.561 235.444l-34.884 104.916 121.923-61.138c43.628 8.634 78.631 17.513 122.168 17.513 10.945 0 21.796-0.541 32.559-1.386-6.814-23.317-10.762-47.739-10.762-73.080 0.001-152.368 130.849-276.023 296.521-276.023zM504.010 224.153c26.261 0 43.659 17.277 43.659 43.52 0 26.139-17.396 43.655-43.659 43.655-26.14 0-52.371-17.516-52.371-43.655 0-26.244 26.229-43.52 52.371-43.52zM259.918 311.328c-26.137 0-52.519-17.516-52.519-43.655 0-26.243 26.381-43.52 52.519-43.52 26.139 0 43.537 17.277 43.537 43.52 0 26.139-17.397 43.655-43.537 43.655zM1009.856 590.545c0-139.436-139.534-253.094-296.248-253.094-165.943 0-296.639 113.657-296.639 253.094 0 139.675 130.698 253.094 296.639 253.094 34.733 0 69.765-8.758 104.646-17.501l95.663 52.383-26.229-87.157c70.007-52.52 122.167-122.164 122.167-200.819zM617.43 546.905c-17.365 0-34.884-17.277-34.884-34.897 0-17.377 17.518-34.879 34.884-34.879 26.381 0 43.659 17.501 43.659 34.879 0 17.622-17.278 34.897-43.659 34.897zM809.273 546.905c-17.247 0-34.643-17.277-34.643-34.897 0-17.377 17.396-34.879 34.643-34.879 26.139 0 43.654 17.501 43.654 34.879 0.001 17.622-17.514 34.897-43.654 34.897z">
+                </path>
+            </symbol>
+            <symbol id="icon-youxiang" viewBox="0 0 1024 1024">
+                <path d="M983.899806 785.385782V224.886223h0.180631l-0.180631-4.696419c-0.180632-5.238314-0.722526-10.476627-1.806315-15.714941-2.890104-25.469042-21.675781-44.977245-45.519139-47.686717H122.287529c-11.741048 0-23.482096 1.625684-34.861881 5.238314-30.346093 10.295996-50.757453 40.100194-50.576821 74.058917v534.849885c-0.361263 21.314518 5.780208 42.087141 17.701887 59.789028l0.361263 0.722526 5.418946 3.973893c18.243782 21.856412 44.977245 34.319986 73.517022 34.500618H904.421944c37.751984 0 70.265655-27.094726 79.477862-66.291763l0.180631-0.541894c0.361263-5.96084 0.361263-11.741048-0.180631-17.701888zM390.16405 547.494091l55.453872 49.854295 43.893456 40.100194c5.418945 5.96084 13.005468 9.57347 21.133886 9.57347 7.947786 0 15.534309-3.431999 21.133886-9.57347l101.153642-91.941436 272.753572 263.721997H126.622685L390.16405 547.494091z m120.119951 30.346092L111.449638 216.03528H115.604163c214.409596-0.903158 703.559711-2.890104 793.875463-0.361263l-399.195625 362.166166z m165.458458-69.72376l251.619686-227.956959v474.518963L675.742459 508.116423z m-328.568707 0.180631L93.205856 760.278003V278.895043l253.967896 229.402011z">
+                </path>
+            </symbol>
+            <symbol id="icon-phone" viewBox="0 0 1024 1024">
+                <path d="M351.988168 131.844817c-22.174022 0-45.686529 23.411199-45.686529 45.686529l0 639.606283c0 22.37459 24.00267 45.686529 45.686529 45.686529l319.803653 0c20.455891 0 45.685505-23.433712 45.685505-45.686529L717.477326 177.530322c0-22.397103-23.556509-45.686529-45.685505-45.686529M466.203466 177.530322l114.216321 0c12.625552 0 22.596647 5.097088 22.596647 11.432377 0 6.312776-11.912307 11.409864-22.596647 11.409864L443.360202 200.372563c-11.45489 0-22.508643-5.097088-22.508643-11.409864 0-6.335289 11.165294-11.432377 22.508643-11.432377L466.203466 177.530322zM512.06805 817.260425c-12.224416 0-23.155373-10.151197-23.155373-22.954805 0-12.805654 10.930957-23.010063 23.155373-23.010063 12.893658 0 22.833031 10.205433 22.833031 23.010063C534.901081 807.109228 524.961708 817.260425 512.06805 817.260425L512.06805 817.260425zM671.791821 725.764572l-319.803653 0L351.988168 246.059092l319.803653 0L671.791821 725.764572z">
+                </path>
+            </symbol>
+        </svg>
+        <header>
+            <h1>RLS</h1>
+            <p>应聘前端工程师</p>
+        </header>
+        <aside>
+            <div class="avatar">
+                <img src="/头像.e04333a7.png" alt="LS">
+            </div>
+            <section>
+                <h2>基础信息</h2>
+                <div class="detail personal">
+                    <div class="item">
+                        <span>学历</span>
+                        <span>本科</span>
+                    </div>
+                    <div class="item">
+                        <span>意向薪资</span>
+                        <span>8-12k</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>专业技能</h2>
+                <div class="detail skills">
+                    <div class="item">
+                        <span class="keyword">HTML5</span>
+                        <span class="rule"><i style="width: 50%;"></i></span>
+                    </div>
+                    <div class="item">
+                        <span class="keyword">CSS3</span>
+                        <span class="rule"><i style="width: 70%;"></i></span>
+                    </div>
+                    <div class="item">
+                        <span class="keyword">JS</span>
+                        <span class="rule"><i style="width: 50%;"></i></span>
+                    </div>
+                    <div class="item">
+                        <span class="keyword">Vue</span>
+                        <span class="rule"><i style="width: 60%;"></i></span>
+                    </div>
+                    <div class="item">
+                        <span class="keyword">React</span>
+                        <span class="rule"><i style="width: 60%;"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>联系方式</h2>
+                <div class="detail contact">
+                    <div class="item">
+                        <svg>
+                            <use xlink:href="#icon-phone"></use>
+                        </svg>
+                        <span><a href="tel:12345678">18616898668</a></span>
+                    </div>
+                    <div class="item">
+                            <svg>
+                            <use xlink:href="#icon-youxiang"></use>
+                            </svg>
+                        <span><a href="mailto:fangyinghang@foxmail.com">1324214367@qq.com</a></span>
+                    </div>
+                    <div class="item">
+                        <svg>
+                            <use xlink:href="#icon-weixin1"></use>
+                        </svg>
+                        <span>lishuwhy</span>
+                    </div>
+                </div>
+            </section>
+
+        </aside>
+        <main>
+            <section>
+                <div class="projects">
+                    <h2>项目经历</h2>
+                    <div class="project1">
+                        <h3>项目1</h3>
+                        <span>
+                            <a href="#">源码链接</a>
+                            <a href="#">项目预览</a>
+                        </span>
+                        <p>
+                            技术描述<strong>React</strong> / <strong>TypeScript</strong> / <strong>Webpack</strong>
+                        </p>
+                        <p>
+                            功能描述<strong>下拉更新</strong>
+                        </p>
+                        <p>
+                            总结描述
+                        </p>
+                    </div>
+                    <div class="project2">
+                        <h3>项目2</h3>
+                        <span>
+                            <a href="#">源码私有</a>
+                            <a href="#">项目预览</a>
+                        </span>
+                        <p>
+                            技术描述 <strong>Rails</strong> 和 <strong>Vue</strong>
+                        </p>
+                        <p>
+                            功能描述
+                        </p>
+                        <p>
+                            总结描述<strong>大幅提高教学效率</strong>
+                        </p>
+                    </div>
+                    <div class="project3">
+                        <h3>项目3</h3>
+                        <span>
+                            <a href="#">源码私有</a>
+                            <a href="#">项目预览</a>
+                        </span>
+                        <p>
+                            技术描述 <strong>React</strong> / <strong>TypeScript</strong>
+                        </p>
+                        <p>
+                            功能描述
+                        </p>
+                        <p>
+                            总结描述<strong>React Hooks</strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
